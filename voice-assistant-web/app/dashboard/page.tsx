@@ -101,6 +101,10 @@ export default function DashboardPage() {
     router.push(`/lesson/${lessonId}`)
   }
 
+  const handleStartVoiceLesson = (lessonId: number) => {
+    router.push(`/voice-lesson/${lessonId}`)
+  }
+
   const handleStartDemo = () => {
     router.push("/lesson/1")
   }
@@ -217,9 +221,15 @@ export default function DashboardPage() {
 
                 <button
                   onClick={() => handleStartLesson(lesson.id)}
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all mb-3"
                 >
                   Start Lesson
+                </button>
+                <button
+                  onClick={() => handleStartVoiceLesson(lesson.id)}
+                  className="w-full bg-gradient-to-r from-green-500 to-teal-600 text-white font-bold py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+                >
+                  🎤 Voice Chat
                 </button>
               </div>
             </div>
