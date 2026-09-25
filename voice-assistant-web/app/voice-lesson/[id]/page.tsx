@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { useRouter, useParams } from "next/navigation"
-import VoiceChat from "../components/VoiceChat"
+import VoiceChat from "../../components/VoiceChat"
 
 interface Lesson {
   id: number
