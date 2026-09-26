@@ -37,10 +37,18 @@ smallAI/
 
 ### Backend
 
+On Windows, create and use the project virtual environment:
+
 ```bash
-pip install fastapi uvicorn requests pypdf python-docx
+python -m venv venv
+venv\Scripts\activate
+python -m pip install -r requirements.txt
 ollama pull qwen3:0.6b
 ```
+
+If these packages are already installed in `venv`, skip the install command. A
+`getaddrinfo failed` error from pip is a DNS/network problem while contacting
+PyPI; it is not a FastAPI error.
 
 ### Frontend
 
@@ -54,7 +62,7 @@ npm install
 ### Start the API Server
 
 ```bash
-python main.py
+venv\Scripts\python.exe -m uvicorn main:app --host 127.0.0.1 --port 8000
 ```
 
 The API will be available at `http://127.0.0.1:8000`

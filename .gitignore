@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.Python
+venv/
+.venv/
+env/
+ENV/
+*.egg-info/
+.eggs/
+
+# Virtual environments and local env
+.env
+.env.*
+.python-version
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build / cache / logs
+build/
+dist/
+*.log
+.coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Project-specific generated/data local files
+data/*.faiss
+*.sqlite3
+*.db
+
+# Node / Next.js (if applicable)
+node_modules/
+.next/
+out/
+.npm/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
